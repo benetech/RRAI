@@ -1,0 +1,392 @@
+/*
+
+ Theme Name:   AIRR
+ Description:  Twenty Sixteen Child Theme for AIRR
+ Author:       Prime Access Consulting, Inc.
+ Author URI:   www.pac.bz
+ Template:     twentysixteen
+ License:      GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  airr
+
+*/
+
+/* GLOBAL STYLES */
+/* ///////////// */
+body, button, select, textarea{
+	color: #595959;
+	font-family: "Helvetica", sans-serif;
+}
+
+input{
+	color: #000;
+	font-family: "Helvetica", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-weight: 400;
+}
+
+h1.entry-title{
+	margin: 1em 0;
+	text-transform: capitalize;
+	font-weight: 400;
+	font-family: "Helvetica", sans-serif;
+}
+
+/* PAGE STRUCTURE */
+/* ////////////// */
+#page.site{
+	margin: 0;
+}
+
+body:not(.custom-background-image):before, body:not(.custom-background-image):after{
+	display: none;
+}
+
+.site-inner{
+	max-width: 100%;
+}
+
+@media screen and (min-width: 56.875em){
+	body.no-sidebar .entry-header, 
+	body.no-sidebar .entry-content, 
+	body.no-sidebar .entry-summary, 
+	body.no-sidebar .entry-footer, 
+	body.no-sidebar .comments-area, 
+	body.no-sidebar .image-navigation, 
+	body.no-sidebar .post-navigation, 
+	body.no-sidebar .pagination, 
+	body.no-sidebar .page-header, 
+	body.no-sidebar .page-content, 
+	body.no-sidebar .content-bottom-widgets {
+		margin-right: 0;
+		margin-left: 0;
+	}
+}
+
+/* HEADER */
+/* ////////////// */
+.site-header{
+	padding: 2em 3em;
+	background: #064373;
+	color: #fff;
+	position: relative;
+}
+
+.main-navigation li:hover > a, .main-navigation li.focus > a, 
+.site-footer a:hover, .site-footer a:focus,
+.site-branding .site-title a:hover, .site-branding .site-title a:focus{
+	color: #F5B642;
+}
+
+.menu-toggle{
+	color: #fff;
+}
+
+.site-description{
+	line-height: 2em;
+	margin: 0;
+	color: #fff;
+}
+
+.site-description::before{
+	content: '';
+    display: inline-block;
+    position: relative;
+    width: 2em;
+    height: 2em;
+    top: .5em;
+    margin-right: .5em;
+    background: url(/wp-content/uploads/2016/10/Benetech-Logo-Circle.png);
+    background-size: 100% 100%;
+}
+
+.site-branding .site-title a, .main-navigation a, .site-info a{
+	color: #fff;
+}
+
+@media screen and (min-width: 61.5625em){
+	.site-header{
+		padding: 1em 3em;
+	}
+}
+
+@media screen and (min-width: 56.875em){
+	.site-header{
+			padding: 1em 3em;
+		}
+}
+
+@media screen and (min-width: 44.375em){
+	.site-header{
+			padding: 1em 3em;
+		}
+}
+
+/* FOOTER */
+/* ////////////// */
+.site-footer{
+	background: #064373;
+	color: #fff;
+	padding-top: 1.75em;
+	position: relative;
+	padding-bottom: 0;
+	border-bottom: 4em solid white;
+}
+
+.footer-widget{
+	text-align: center;
+    padding: 1em 1em 2em;
+}
+
+.textwidget > img{
+	position: absolute;
+	right: 3.5em;
+	bottom: -60px;
+}
+
+.site-footer .site-info{
+	display: none;
+}
+
+/* SEARCH PAGES */
+/* ////////////// */
+
+/* Page Navigation */
+.pagination:before, .pagination:after{
+	display: none;
+}
+
+@media screen and (min-width: 1em){
+	.pagination{
+		margin: 0;
+	}
+}
+
+.no-sidebar .pagination{
+	margin: 0;
+	border-top: none;
+	min-height: auto;
+}
+
+.wp-pagenavi{
+	margin-bottom: 2em;
+}
+
+.wp-pagenavi span, .wp-pagenavi a{
+	border: none;
+}
+
+.wp-pagenavi span:first-child{
+	border-right: 1px solid #000;
+    padding: .5em 1em .5em 0;
+    margin-right: 1em
+}
+
+/* Search Form */
+form.searchandfilter{
+	padding-bottom: 2em;
+	border-bottom: 3px solid #064373;
+}
+
+.searchandfilter h4{
+	display: inline-block;
+	margin-right: 2em;
+	margin-bottom: 0;
+	letter-spacing: 0;
+    text-transform: none;
+    font-weight: normal;
+    width: 5em; /* so that text box left sides line up */
+}
+
+.searchandfilter h4::after{
+	display: inline;
+	content: ":";
+	position: relative;
+}
+
+.searchandfilter>ul>li[data-sf-combobox="1"] label{
+	display: inline-block;
+}
+
+form.searchandfilter > ul > li{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	max-width: 40em;
+}
+
+form.searchandfilter label{
+	flex-grow: 5;
+}
+
+form.searchandfilter select{
+	width: 100%;
+}
+
+.sf-field-search label{
+	width: 100%;
+}
+
+.chosen-container{
+	width: 100%; /* but I think this gets overwritten inline */
+}
+
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="tel"], input[type="number"], textarea{
+	background: #fff;
+	border: 1px solid #000;
+	border-radius: 2em;
+	max-width: 40em;
+	color: #000;
+	padding: .5em 1.5em;
+}
+
+input[type="submit"]{
+	background: #064373;
+    border-radius: .75em;
+    padding: .85em 2.5em;
+    margin-top: 2em;
+    font-size: 1.125em;
+}
+
+select{
+	height: 2.25em;
+	background: #fff;
+	border: 1px solid #000;
+}
+
+::-webkit-input-placeholder {
+   color: #595959;
+   font-weight: normal;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: #595959;
+   font-weight: normal;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #595959;
+   font-weight: normal;
+}
+
+:-ms-input-placeholder {  
+   color: #595959;
+   font-weight: normal;
+}
+
+.chosen-container-multi .chosen-choices{
+	border: 1px solid #000;
+	background: #fff;
+	border-radius: .4em;
+	font-size: 1.125em;
+}
+
+/* Browse search form */
+#search-filter-form-597 .sf-field-taxonomy-modality, #search-filter-form-597 .sf-field-taxonomy-subject{
+	float: left;
+	width: 25em;
+}
+
+#search-filter-form-597 .sf-field-submit{
+	clear: both;
+}
+
+/* Search Results Section */
+.search-filter-results h2{
+	font-size: 1.25em;
+	color: #595959;
+}
+
+.search-filter-results ul.modality{
+	margin-left: 2em;
+}
+
+.search-filter-results td.title, .search-filter-results th {
+	text-align: center;
+}
+
+.search-filter-results td.title img{
+	margin-top: 1em;
+}
+
+/* INDIVIDUAL CONCEPT PAGES */
+/* //////////////////////// */
+.post-thumbnail img{
+	float: none;
+	padding: 0 1em 1em 0;
+}
+
+.info > .subjects, .info > .tags, .info > .languages{
+	display: flex;
+	flex-direction: row;
+}
+
+.info h2{
+	width: 7em;
+}    
+
+.type-concept .info{
+	width: 40%;
+	float: left;
+}
+
+/* Associated Resources */
+.type-concept .downloadable-resources{
+	width: 50%;
+	float: right;
+}
+
+.associated-resources .resource{
+    margin-bottom: 1em;
+    padding: 1em 0;
+    border-top: 1px solid #064373;
+}
+
+.associated-resources .resource > div {
+	margin-left: 2em;
+}
+
+.associated-resources h4{
+	text-transform: none;
+	letter-spacing: normal;
+}
+
+.associated-resources li img{
+	margin-right: 1em;
+	float: left;
+}
+
+h3.resource-title{
+	margin-bottom: 1em;
+	font-size: 1.1em;
+	color: #000;
+}
+
+.resource-image{
+	float: none;
+	width: 200px;
+}
+
+.resource-description ul, .resource-description ol{
+	margin-left: 1em;
+}
+
+.associated-resources .resource-description{
+	margin-top: 2em;
+}
+
+.citation-block{
+	padding: 2em;
+	background: #eee;
+	margin-bottom: 2em;
+}
+
+.download .button{
+	color: #fff;
+	background: #064373;
+	border-radius: .1em;
+    padding: .75em 1.5em;
+    margin-right: 1em;
+}
